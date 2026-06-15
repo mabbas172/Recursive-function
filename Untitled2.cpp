@@ -2,24 +2,19 @@
 using namespace std;
 
 
+void P_N(int n)
+{
+	if(n==1)
+	{
+		cout<<"1 "<<endl;
+		return;
+	}
+	cout<<n<<" ";
+	P_N(n-1);
+}
+
 int main()
 {
-	string a;
-	cin>>a;
-	
-	int start=0;
-	int end=a.length()-1;
-	for(int i=0;i<a.length();i++)
-	{
-		if(a[start]!=a[end])
-		{
-			cout<<"False";
-			return 0;
-		}
-		else
-		{
-			cout<<"true";
-			return 0;
-		}
-	}
+	P_N(100);
+	return 0;
 }
